@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 const resolvePath = (str: string) => path.resolve(__dirname, str)
+
 export default defineConfig({
   plugins: [
     react(),
@@ -10,8 +11,8 @@ export default defineConfig({
   build:{
     sourcemap: true,
     lib: {
-      // entry: "index.tsx",
-      entry: resolvePath('packages/index.tsx'), // 配置库入口
+      // entry: "index.ts",
+      entry: resolvePath('index.ts'), // 配置库入口
       name: "JediArsenalUI",
       fileName: "jedi-arsenal-ui",
       formats: ["es", "cjs", "umd"],
