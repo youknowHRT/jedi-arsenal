@@ -1,30 +1,63 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-
-const resolvePath = (str: string) => path.resolve(__dirname, str)
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import dts from "vite-plugin-dts";
+const resolvePath = (str: string) => path.resolve(__dirname, str);
 
 export default defineConfig({
   plugins: [
     react(),
+    dts({
+      tsconfigPath: "./tsconfig.prod.json",
+      insertTypesEntry: true,
+      outDir: "./dist/types",
+      // insertTypesEntry: false, // 插入TS 入口
+      // copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
+    }),
   ],
-  build:{
+  build: {
+    outDir: "dist",
     sourcemap: true,
     lib: {
       // entry: "index.ts",
-      entry: resolvePath('index.ts'), // 配置库入口
+      entry: resolvePath("index.ts"), // 配置库入口
       name: "JediArsenalUI",
-      fileName: "jedi-arsenal-ui",
+      fileName: format => `jedi-arsenal-ui.${format}.js`,
       formats: ["es", "cjs", "umd"],
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react","react-dom"],
       output: {
         globals: {
           react: "react",
           "react-dom": "react-dom",
         },
       },
+      // output: [
+      //   {
+      //     format: "es",
+      //     entryFileNames: "[name].js",
+      //     exports: "named",
+      //     name: "JediArsenalUI",
+      //     dir: "./build/dist",
+      //   },
+      //   {
+      //     format: "es",
+      //     entryFileNames: "[name].js",
+      //     exports: "named",
+      //     preserveModules: true,
+      //     preserveModulesRoot: "./",
+      //     dir: "./build/es",
+      //   },
+      //   {
+      //     format: "cjs",
+      //     entryFileNames: "[name].js",
+      //     exports: "named",
+      //     preserveModules: true,
+      //     preserveModulesRoot: "packages/components",
+      //     dir: "./build/lib",
+      //   },
+      // ],
     },
-  }
-})
+  },
+});

@@ -2,3 +2,4 @@
 // export type {ButtonProps} from './button'
 
 export * from "./button"
+export * from "./calendar"

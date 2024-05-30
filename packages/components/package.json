@@ -1,10 +1,11 @@
 {
   "name": "@jedi-arsenal/components",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "private": false,
   "description": "React组件库",
-  "main": "dist/jedi-arsenal-ui.js",
+  "main": "dist/jedi-arsenal-ui.es.js",
   "module": "index.ts",
+  "types": "dist/types/jedi-arsenal-ui.es.d.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +26,8 @@
   "license": "ISC",
   "devDependencies": {
     "vite-plugin-dts": "^3.9.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
