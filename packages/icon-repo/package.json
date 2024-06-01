@@ -1,16 +1,19 @@
 {
   "name": "@jedi-arsenal/icons",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "private": false,
+  "description": "React-svg组件库",
+  "main": "dist/jedi-arsenal-icons.es.js",
   "type": "module",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "svgo": "svgo -f svg -o svg",
-    "build:g": "tsx build/generate.ts"
+    "build:g": "tsx build/generate.ts",
+    "build": "vite build"
   },
   "keywords": [],
-  "author": "",
+  "author": "driss233",
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -19,6 +22,10 @@
     "fs-extra": "^11.2.0",
     "prettier": "^3.2.5",
     "svgo": "^3.3.2",
-    "tsx": "^4.11.0"
-  }
+    "tsx": "^4.11.0",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "files": [
+    "dist"
+  ]
 }
