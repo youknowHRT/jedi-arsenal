@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jedi-arsenal/components": "workspace:^"
+    "@jedi-arsenal/components": "workspace:^",
+    "@jedi-arsenal/icons": "workspace:^"
   }
 }

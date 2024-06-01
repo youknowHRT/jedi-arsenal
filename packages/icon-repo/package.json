@@ -1,0 +1,24 @@
+{
+  "name": "@jedi-arsenal/icons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svgo": "svgo -f svg -o svg",
+    "build:g": "tsx build/generate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "camelcase": "^8.0.0",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "prettier": "^3.2.5",
+    "svgo": "^3.3.2",
+    "tsx": "^4.11.0"
+  }
+}

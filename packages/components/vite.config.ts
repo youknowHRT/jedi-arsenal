@@ -8,7 +8,9 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      tsconfigPath: "./tsconfig.prod.json",
+      exclude: ["node_modules", "vite.config.ts"],
+      entryRoot: "./",
+      // tsconfigPath: "./tsconfig.prod.json",
       insertTypesEntry: true,
       outDir: "./dist/types",
       // insertTypesEntry: false, // 插入TS 入口
