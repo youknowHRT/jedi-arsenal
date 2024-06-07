@@ -4,7 +4,7 @@
   "private": false,
   "description": "React组件库",
   "main": "dist/jedi-arsenal-ui.es.js",
-  "module": "index.ts",
+  "module": "dist/jedi-arsenal-ui.es.js",
   "types": "dist/types/jedi-arsenal-ui.es.d.ts",
   "type": "module",
   "scripts": {

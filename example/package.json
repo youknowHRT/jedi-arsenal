@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@jedi-arsenal/components": "workspace:^",
+    "@jedi-arsenal/hooks": "workspace:^",
     "@jedi-arsenal/icons": "workspace:^"
   }
 }
