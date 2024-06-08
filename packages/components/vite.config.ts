@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      exclude: ["node_modules", "vite.config.ts"],
-      entryRoot: "./",
+      exclude: ["node_modules", "vite.config.ts", "src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+      entryRoot: "./src",
       // tsconfigPath: "./tsconfig.prod.json",
       insertTypesEntry: true,
       outDir: "./dist/types",
@@ -22,7 +22,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       // entry: "index.ts",
-      entry: resolvePath("index.ts"), // 配置库入口
+      entry: resolvePath("src/index.ts"), // 配置库入口
       name: "JediArsenalUI",
       fileName: format => `jedi-arsenal-ui.${format}.js`,
       formats: ["es", "cjs", "umd"],
