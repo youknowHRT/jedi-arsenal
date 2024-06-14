@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Title, Subtitle, Description, Primary, Controls, Stories, Source } from '@storybook/blocks';
 import { useState, useEffect } from 'react';
 import useLatest from './index';
 
@@ -60,16 +61,38 @@ export default () => {
   );
 };
 `;
+
+
 const meta = {
   title: 'Hooks/Advanced/useLatest',
   component: Demo,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
     docs: {
+      // defaultName: 'Documentation',
       source: {
         code: `${showCode}`, // 使用自定义的代码字符串覆盖默认的源代码展示
       },
+      // description: {
+      //   component: 'Another description, overriding the comments1'
+      // },
+      page: () => (
+        <>
+          <Title />
+          <Subtitle>
+            <span style={{fontSize: '15px'}}>返回更新后的数据，有效处理闭包问题</span>
+          </Subtitle>
+          {/* <Description/> */}
+          <Subtitle>
+            <div style={{color:'#333', fontWeight: 'bold', fontSize: '24px'}}>Examples</div>
+          </Subtitle>
+          <Primary />
+          <Subtitle>
+            <div style={{color:'#333', fontWeight: 'bold', fontSize: '24px'}}>API</div>
+          </Subtitle>
+          <Source code={`const latestValueRef = useLatest<T>(value: T): MutableRefObject<T>;`} />
+        </>
+      ),
     },
   },
   tags: ['autodocs'],
@@ -82,10 +105,14 @@ type Story = StoryObj<typeof meta>;
 
 /**
  * 返回更新后的数据，有效处理闭包问题
+ * 
+ * # API
+ * 
+ * ```ts
+ * const latestValueRef = useLatest<T>(value: T): MutableRefObject<T>;
+ * ```
  */
 export const Value: Story = {
-  // render(args) {
-  //   return <div>
-  //   </div>
-  // }
 };
+
+Value.storyName = 'useLatest';
