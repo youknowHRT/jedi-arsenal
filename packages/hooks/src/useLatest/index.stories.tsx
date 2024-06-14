@@ -114,5 +114,3 @@ type Story = StoryObj<typeof meta>;
  */
 export const Value: Story = {
 };
-
-Value.storyName = 'useLatest';
