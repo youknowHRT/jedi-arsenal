@@ -9,7 +9,7 @@ hero:
 features:
   - title: 更好的编译性能
     icon: https://api.iconify.design/logos:randomcolor.svg
-    description: 无敌的雅痞
+    description: 无敌的雅痞flow
   - emoji: 🔍
     title: 内置全文搜索
     description: 好看又实用啊
