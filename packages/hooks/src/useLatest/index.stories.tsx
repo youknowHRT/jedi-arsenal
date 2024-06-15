@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Title, Subtitle, Description, Primary, Controls, Stories, Source } from '@storybook/blocks';
+import { Title, Subtitle, Description, Source, Story, Canvas } from '@storybook/blocks';
 import { useState, useEffect } from 'react';
 import useLatest from './index';
 
@@ -29,7 +29,7 @@ const Demo = ()=>{
     </>
   );
 }
-const showCode = `
+const demoShowCode = `
 import React, { useState, useEffect } from 'react';
 import {useLatest} from '@jedi-arsenal/hooks';
 
@@ -70,9 +70,9 @@ const meta = {
     layout: 'centered',
     docs: {
       // defaultName: 'Documentation',
-      source: {
-        code: `${showCode}`, // 使用自定义的代码字符串覆盖默认的源代码展示
-      },
+      // source: {
+      //   code: `${demoShowCode}`, // 使用自定义的代码字符串覆盖默认的源代码展示
+      // },
       // description: {
       //   component: 'Another description, overriding the comments1'
       // },
@@ -86,7 +86,7 @@ const meta = {
           <Subtitle>
             <div style={{color:'#333', fontWeight: 'bold', fontSize: '24px'}}>Examples</div>
           </Subtitle>
-          <Primary />
+          <Canvas of={Value}/>
           <Subtitle>
             <div style={{color:'#333', fontWeight: 'bold', fontSize: '24px'}}>API</div>
           </Subtitle>
@@ -113,4 +113,11 @@ type Story = StoryObj<typeof meta>;
  * ```
  */
 export const Value: Story = {
+  parameters: {
+    docs: {
+      source: {
+        code: `${demoShowCode}`
+      },
+    }
+  },
 };
