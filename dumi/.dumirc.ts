@@ -3,8 +3,10 @@ export default defineConfig({
   chainWebpack(memo) {
     memo.plugins.delete("copy");
   },
-  base: '/docs/', // 后续部署到gh-pages如果不配置路径会找不到资源
-  publicPath: '/docs/',
+  base: '/jedi-arsenal/', // 后续部署到gh-pages如果不配置路径会找不到资源
+  publicPath: '/jedi-arsenal/',
+  // base: process.env.NODE_ENV === 'production' ? `/jedi-arsenal-doc/` : '/',
+  // publicPath: process.env.NODE_ENV === 'production' ? `/jedi-arsenal-doc/` : '/',
   title: "Jedi Arsenal", // 站点名称
   resolve: {
     docDirs: ["docs"],
