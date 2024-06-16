@@ -1,4 +1,6 @@
 import { defineConfig } from "dumi";
+import path from 'path';
+
 export default defineConfig({
   chainWebpack(memo) {
     memo.plugins.delete("copy");
@@ -12,9 +14,9 @@ export default defineConfig({
     docDirs: ["docs"],
     atomDirs: [
       // 在这里修改components的匹配路径
-      { type: "hooks", dir: "../packages/hooks/src" },
-      { type: "components", dir: "../packages/components/src" },
-    ],
+      { type: "hooks", dir: "packages/hooks/src" },
+      { type: "components", dir: "packages/components/src" },
+    ]
     // codeBlockMode: 'passive'
   },
   themeConfig: {
@@ -30,5 +32,16 @@ export default defineConfig({
     //     link: "/hooks/use-latest",
     //   },
     // ],
+  },
+  monorepoRedirect: {
+    // srcDir: ['src'],
+    // useRootProject: true
+    // srcDir: ['packages', 'src'],
+    peerDeps: true,
+  },
+  // monorepoRedirect: { peerDeps: true }
+  alias: {
+    '@jedi-arsenal/hooks': path.join(__dirname, 'packages/hooks/src/index.ts'),
+    // '@jedi-arsenal/hooks': process.cwd() + '/packages/hooks/src/index.ts',
   },
 });

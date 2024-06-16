@@ -9,20 +9,21 @@ toc: content
 # 快速上手
 
 ## 安装
-build2
-**使用 npm / yarn / pnpm 安装**
 
-```shell
+**使用 npm / yarn / pnpm 安装**
+:::code-group
+```bash [npm]
 npm install @k-maikou/perfect-design
 ```
 
-```shell
+```bash [yarn]
 yarn add @k-maikou/perfect-design
 ```
 
-```shell
+```bash [pnpm]
 pnpm install @k-maikou/perfect-design
 ```
+:::
 
 ## 示例
 

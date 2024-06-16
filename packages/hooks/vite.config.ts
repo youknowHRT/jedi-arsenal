@@ -62,4 +62,9 @@ export default defineConfig({
       // ],
     },
   },
+  // resolve: {
+  //   alias: {
+  //     '@jedi-arsenal/hooks': path.join(__dirname, 'src')
+  //   },
+  // },
 });
