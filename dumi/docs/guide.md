@@ -1,8 +1,9 @@
 ---
 nav:
-  title: 快速上手
+  title: 导航
   order: 1
-group: 导航
+group:
+  title: 上手
 toc: content
 ---
 

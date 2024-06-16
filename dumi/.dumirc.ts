@@ -1,6 +1,5 @@
 import { defineConfig } from "dumi";
 import path from 'path';
-
 export default defineConfig({
   chainWebpack(memo) {
     memo.plugins.delete("copy");
@@ -14,34 +13,26 @@ export default defineConfig({
     docDirs: ["docs"],
     atomDirs: [
       // 在这里修改components的匹配路径
-      { type: "hooks", dir: "packages/hooks/src" },
-      { type: "components", dir: "packages/components/src" },
+      { type: "hooks", dir: "../packages/hooks/src" },
+      { type: "components", dir: "../packages/components/src" },
     ]
     // codeBlockMode: 'passive'
   },
   themeConfig: {
     name: "Jedi Arsenal",
-    // nav: [
-    //   // dumi的菜单路由
-    //   {
-    //     title: "指南",
-    //     link: "/guide",
-    //   },
-    //   {
-    //     title: "组件",
-    //     link: "/hooks/use-latest",
-    //   },
-    // ],
+    apiHeader: false,
+    description: 'React 组件和钩子合集',
+    sidebarGroupModePath: ['/hooks', '/guide'],
+    features: [
+      {
+        title: '内置全文搜索',
+        details:
+          '不需要接入任何三方服务，标题、正文、demo 等内容均可被搜索，支持多关键词搜索，且不会带来产物体积的增加。'
+      },
+    ]
   },
-  monorepoRedirect: {
-    // srcDir: ['src'],
-    // useRootProject: true
-    // srcDir: ['packages', 'src'],
-    peerDeps: true,
-  },
-  // monorepoRedirect: { peerDeps: true }
   alias: {
-    '@jedi-arsenal/hooks': path.join(__dirname, 'packages/hooks/src/index.ts'),
+    '@jedi-arsenal/hooks': path.join(__dirname, '../packages/hooks/src/index.ts'),
     // '@jedi-arsenal/hooks': process.cwd() + '/packages/hooks/src/index.ts',
-  },
+  }
 });

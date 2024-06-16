@@ -10,9 +10,9 @@
     "storybook-docs": "storybook dev --docs -p 6007",
     "build-storybook": "storybook build",
     "build-storybook-docs": "storybook build --docs",
-    "dumi": "dumi dev",
-    "dumi:build": "dumi build",
-    "dumi:preview": "dumi preview"
+    "dumi": "cross-env APP_ROOT=dumi dumi dev",
+    "dumi:build": "cross-env APP_ROOT=dumi dumi build",
+    "dumi:preview": "cross-env APP_ROOT=dumi dumi preview"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,7 @@
     "@storybook/test": "^8.1.6",
     "cross-env": "^7.0.3",
     "dumi": "^2.3.8",
+    "dumi-theme-antd": "^0.4.1",
     "storybook": "^8.1.6",
     "vite": "^5.2.11"
   },

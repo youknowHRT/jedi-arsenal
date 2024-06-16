@@ -25,4 +25,5 @@ yarn-error.log*
 
 *storybook.log
 
-.dumi
+**/tmp
+**/tmp-production
