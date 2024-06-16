@@ -29,7 +29,6 @@
     "@storybook/test": "^8.1.6",
     "cross-env": "^7.0.3",
     "dumi": "^2.3.8",
-    "dumi-theme-antd-style": "^0.31.0",
     "storybook": "^8.1.6",
     "vite": "^5.2.11"
   },
