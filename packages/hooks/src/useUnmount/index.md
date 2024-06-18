@@ -2,7 +2,9 @@
 nav:
   title: hooks
   order: 2
-group: LifeCycle
+group:
+  title: LifeCycle
+  order: 73
 toc: content
 ---
 # useUnmount
