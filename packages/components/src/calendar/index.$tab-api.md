@@ -1,27 +1,6 @@
 ---
-nav:
-  title: component
-  order: 1
-group: 
-  title: 数据展示
-  order: 2
-toc: content
+title: API
 ---
-# Calendar
-按照日历形式展示数据的容器。
-
-## 代码演示
-
-<code src="./demo/demo1.tsx"></code>
-
-<code src="./demo/demo2.tsx"></code>
-
-<code src="./demo/demo3.tsx"></code>
-
-<code src="./demo/demo4.tsx"></code>
-
-
-## API
 
 | 属性名 | 描述 | 类型 | 默认值 |
 | --- | --- | --- | --- |

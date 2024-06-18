@@ -2,7 +2,9 @@
 nav:
   title: component
   order: 1
-group: 数据展示
+group: 
+  title: 通用
+  order: 1
 toc: content
 ---
 

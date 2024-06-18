@@ -14,13 +14,16 @@ export default defineConfig({
     atomDirs: [
       { type: "hooks", dir: "../packages/hooks/src" },
       { type: "components", dir: "../packages/components/src" },
-    ]
+    ],
+    // 配置入口文件路径，API 解析将从这里开始,注释掉，待完善
+    // entryFile: '../packages/components/src/index.ts',
   },
+  // apiParser: {},
   themeConfig: {
     name: "Jedi Arsenal",
     apiHeader: false,
     description: 'React 组件和钩子合集',
-    sidebarGroupModePath: ['/hooks', '/guide'],
+    sidebarGroupModePath: ['/hooks', '/guide', '/components'],
     features: [
       {
         title: '内置全文搜索',
@@ -31,5 +34,8 @@ export default defineConfig({
   },
   alias: {
     '@jedi-arsenal/hooks': path.join(__dirname, '../packages/hooks/src/index.ts'),
-  }
+    '@jedi-arsenal/components': path.join(__dirname, '../packages/components/src/index.ts'),
+    // 'dayjs': path.join(__dirname, '../node_modules/dayjs'), //如果mfsu为默认值时需要添加
+  },
+  mfsu: false,
 });
