@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      exclude: ["node_modules", "vite.config.ts", "src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+      exclude: ["node_modules", "vite.config.ts", "src/**/*.stories.@(js|jsx|mjs|ts|tsx)","src/**/demo"],
       entryRoot: "./src",
       // tsconfigPath: "./tsconfig.prod.json",
       insertTypesEntry: true,
