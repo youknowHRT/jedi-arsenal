@@ -15,6 +15,6 @@ git commit -m 'deploy'
 # https://gitee.com/youknowhrt/jedi-arsenal.git
 # https://github.com/youknowHRT/jedi-arsenal.git
 
-git push -f git@github.com:youknowHRT/jedi-arsenal.git master:gh-pages
-# git push -f git@gitee.com:youknowhrt/jedi-arsenal.git master:gh-pages
+# git push -f git@github.com:youknowHRT/jedi-arsenal.git master:gh-pages
+git push -f git@gitee.com:youknowhrt/jedi-arsenal.git master:gh-pages
 cd -

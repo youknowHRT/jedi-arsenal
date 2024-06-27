@@ -6,8 +6,13 @@ export default defineConfig({
   },
   base: '/jedi-arsenal/', // 后续部署到gh-pages如果不配置路径会找不到资源
   publicPath: '/jedi-arsenal/',
+
   // base: process.env.NODE_ENV === 'production' ? `/jedi-arsenal-doc/` : '/',
   // publicPath: process.env.NODE_ENV === 'production' ? `/jedi-arsenal-doc/` : '/',
+
+  //服务器部署80端口
+  // base: '/',
+  // publicPath: '/',
   title: "Jedi Arsenal", // 站点名称
   resolve: {
     docDirs: ["docs"],
