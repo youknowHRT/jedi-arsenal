@@ -31,9 +31,19 @@ export default defineConfig({
     sidebarGroupModePath: ['/hooks', '/guide', '/components'],
     features: [
       {
-        title: '内置全文搜索',
+        title: '支持 Typescript',
         details:
-          '不需要接入任何三方服务，标题、正文、demo 等内容均可被搜索，支持多关键词搜索，且不会带来产物体积的增加。'
+          '使用 Typescript 构建，提供良好的类型支持'
+      },
+      {
+        title: '按需引入',
+        details:
+          '支持直接按需引入无需配置插件'
+      },
+      {
+        title: '仅供学习使用',
+        details:
+          '倾向于React库的学习，请勿用于实际生产项目'
       },
     ]
   },

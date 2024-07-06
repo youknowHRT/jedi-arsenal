@@ -21,23 +21,42 @@ const MyComponent = () => {
   return <p>Hello World!</p>;
 };
 
-function Aaa() {
+function Aaa(props) {
+  console.log("🚀 ~ Aaa ~ type:", props)
+  const {type} = props
   const message = useMessage();
 
   return <button onClick={() =>{
     message.add({
-      content:'请求成功'
+      content:'请求成功',
+      duration: 1000000,
+      type
     })
   }}>成功</button>
 }
 function App(){
   // console.log(ja,'🍉')
   // const [state, setState] = useState(true);
-  // const messageRef = useRef<MessageRef>(null);
+  const messageRef = useRef<MessageRef>(null);
+  
   return (
     <ConfigProvider>
       <div>
-        <Aaa></Aaa>
+        <MessageProvider ref={messageRef}></MessageProvider>
+        <Aaa type='success'></Aaa>
+        <Aaa type='warning'></Aaa>
+        <Aaa type='error'></Aaa>
+        <Aaa type='info'></Aaa>
+        <button onClick={()=>{
+          messageRef.current.add({
+            content:'请求成功sssssss',
+            // duration: 1000000,
+            type:'success',
+            onClose: ()=>{
+              console.log('🍎🍎🍎🍎🍎🍎')
+            }
+          })
+        }}>ssssss</button>
       </div>
     </ConfigProvider>
   )

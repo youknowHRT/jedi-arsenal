@@ -1,4 +1,6 @@
 import "./style/reset.css"
+import "./style/cssVar.css"
 export * from "./button"
 export * from "./calendar"
+export * from "./config-provider"
 export * from "./message"

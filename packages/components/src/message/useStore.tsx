@@ -34,8 +34,8 @@ function useStore(defaultPosition: Position){
       })
       return id
     },
-    update:(id: number, messageProps: MessageProps)=>{
-      if(!!id)return
+    update:(id: number, messageProps: MessageProps) => {
+      if(!id)return
       setMessageList((preState)=>{
         const nextState = {...preState}
         const {position, index} =findMessage(preState, id)
@@ -45,7 +45,6 @@ function useStore(defaultPosition: Position){
             ...messageProps
           }
         }
-        
         return nextState
       })
     },

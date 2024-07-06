@@ -1,3 +1,7 @@
 export { default as IconArrowLeft } from './IconArrowLeft'
 export { default as IconCharts } from './IconCharts'
+export { default as IconCheckCircle } from './IconCheckCircle'
+export { default as IconCloseCircle } from './IconCloseCircle'
+export { default as IconExclamationCircle } from './IconExclamationCircle'
+export { default as IconInfoCircle } from './IconInfoCircle'
 export { default as IconMale } from './IconMale'

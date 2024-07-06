@@ -9,8 +9,8 @@ toc: content
 ---
 
 # Button
+按钮用于开始一个即时操作。
 
-```tsx
-import React from 'react';
-export default () => <button>aaa</button>;
-```
+## 代码演示
+
+<code src="./demo/demo1.tsx"></code>

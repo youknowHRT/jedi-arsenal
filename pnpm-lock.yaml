@@ -96,6 +96,9 @@ importers:
 
   packages/components:
     dependencies:
+      '@jedi-arsenal/icons':
+        specifier: workspace:^
+        version: link:../icon-repo
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.12

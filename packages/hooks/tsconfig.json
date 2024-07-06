@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "paths":{
-      "@jedi-arsenal/hooks":["./src"]
+      "@jedi-arsenal/hooks":["./src"],
+      "@jedi-arsenal/components": ["../components/src"]
     }
   }
 }

@@ -1,7 +1,7 @@
 import { PropsWithChildren, RefObject, createContext, useRef } from "react";
-import { MessageProvider, MessageRef } from "./message";
+import { MessageProvider, MessageRef } from "../message/message";
 
-interface ConfigProviderProps {
+export interface ConfigProviderProps {
   messageRef?: RefObject<MessageRef>
 }
 

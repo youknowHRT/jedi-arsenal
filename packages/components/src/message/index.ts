@@ -1,6 +1,3 @@
-// import Message from './message'
 export type { MessageProps, MessageRef } from './message'
 export { MessageProvider} from './message'
-export {ConfigProvider} from './ConfigProvider'
 export {useMessage}from './useMessage'
-// export {default as MessageProvider} from './message'
