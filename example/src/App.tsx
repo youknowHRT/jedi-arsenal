@@ -38,7 +38,7 @@ function App(){
   // console.log(ja,'🍉')
   // const [state, setState] = useState(true);
   const messageRef = useRef<MessageRef>(null);
-  
+  const [count, setCount] = useState(0);
   return (
     <ConfigProvider>
       <div>
@@ -49,13 +49,14 @@ function App(){
         <Aaa type='info'></Aaa>
         <button onClick={()=>{
           messageRef.current.add({
-            content:'请求成功sssssss',
+            content:`请求成功sssssss${count}`,
             // duration: 1000000,
             type:'success',
             onClose: ()=>{
               console.log('🍎🍎🍎🍎🍎🍎')
             }
           })
+          setCount(count+1)
         }}>ssssss</button>
       </div>
     </ConfigProvider>

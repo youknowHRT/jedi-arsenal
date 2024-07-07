@@ -81,13 +81,8 @@ export const MessageProvider = forwardRef<MessageRef,{}>((props,ref)=>{
         return <TransitionGroup className={`message-wrapper-${direction}`} key={direction}>
           {
             messageList[direction].map(item=>{
-              const nodeRef = createRef<HTMLElement>()
-              const onClose = (id: number)=>{
-                remove(id)
-                item?.onClose && item.onClose()
-              }
-              return <CSSTransition key={item.id} timeout={300} classNames="message" nodeRef={nodeRef}>
-                <MessageItem {...item} onClose={onClose} remove={remove}></MessageItem>
+              return <CSSTransition key={item.id} timeout={300} classNames="message">
+                <MessageItem {...item} onClose={item?.onClose} remove={remove}></MessageItem>
               </CSSTransition>
             })
           }
