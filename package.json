@@ -6,10 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm",
-    "storybook": "storybook dev -p 6006",
-    "storybook-docs": "storybook dev --docs -p 6007",
-    "build-storybook": "storybook build",
-    "build-storybook-docs": "storybook build --docs",
     "dumi": "cross-env APP_ROOT=dumi dumi dev",
     "dumi:build": "cross-env APP_ROOT=dumi dumi build",
     "dumi:preview": "cross-env APP_ROOT=dumi dumi preview"
@@ -18,19 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.5.0",
-    "@storybook/addon-essentials": "^8.1.6",
-    "@storybook/addon-interactions": "^8.1.6",
-    "@storybook/addon-links": "^8.1.6",
-    "@storybook/addon-onboarding": "^8.1.6",
-    "@storybook/blocks": "^8.1.6",
-    "@storybook/react": "^8.1.6",
-    "@storybook/react-vite": "^8.1.6",
-    "@storybook/test": "^8.1.6",
     "cross-env": "^7.0.3",
     "dumi": "^2.3.8",
     "dumi-theme-antd": "^0.4.1",
-    "storybook": "^8.1.6",
     "vite": "^5.2.11"
   },
   "dependencies": {

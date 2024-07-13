@@ -27,7 +27,7 @@ export default defineConfig({
   themeConfig: {
     name: "Jedi Arsenal",
     apiHeader: false,
-    description: 'React 组件和钩子合集',
+    description: 'React 组件和hooks库',
     sidebarGroupModePath: ['/hooks', '/guide', '/components'],
     features: [
       {
