@@ -4,11 +4,11 @@
  */
 
 import React from "react";
-import { JaCalendar } from "@jedi-arsenal/components";
+import { Calendar } from "@jedi-arsenal/components";
 import dayjs from "dayjs";
 
 const App = ()=>{
-  return <JaCalendar
+  return <Calendar
     value={dayjs("2024-5-21")}
     locale="en-US"
     onChange={date => {

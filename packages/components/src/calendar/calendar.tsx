@@ -16,7 +16,7 @@ export interface CalendarProps {
   onChange?: (value: Dayjs) => void;
 }
 
-function Calendar(props: CalendarProps) {
+export function Calendar(props: CalendarProps) {
   const { value, style, className, locale, onChange } = props;
 
   const [curValue, setCurValue] = useState<Dayjs>(value);
@@ -62,5 +62,3 @@ function Calendar(props: CalendarProps) {
     </LocaleContext.Provider>
   );
 }
-
-export default Calendar;

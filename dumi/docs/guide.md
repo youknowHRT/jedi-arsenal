@@ -1,9 +1,10 @@
 ---
 nav:
-  title: 导航
+  title: component
   order: 1
-group:
-  title: 上手
+group: 
+  title: 如何使用
+  order: 1
 toc: content
 ---
 
@@ -14,15 +15,15 @@ toc: content
 **使用 npm / yarn / pnpm 安装**
 :::code-group
 ```bash [npm]
-npm install @k-maikou/perfect-design
+npm install @jedi-arsenal/components
 ```
 
 ```bash [yarn]
-yarn add @k-maikou/perfect-design
+yarn add @jedi-arsenal/components
 ```
 
 ```bash [pnpm]
-pnpm install @k-maikou/perfect-design
+pnpm install @jedi-arsenal/components
 ```
 :::
 

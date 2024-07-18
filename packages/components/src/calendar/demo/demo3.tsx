@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { JaCalendar } from "@jedi-arsenal/components";
+import { Calendar } from "@jedi-arsenal/components";
 import dayjs,{Dayjs} from "dayjs";
 
 const App = ()=>{
@@ -15,7 +15,7 @@ const App = ()=>{
       </p>
     </div>
   );
-  return <JaCalendar
+  return <Calendar
     value={dayjs("2024-5-21")}
     locale="en-US"
     dateInnerContent={nodeRenderFn}

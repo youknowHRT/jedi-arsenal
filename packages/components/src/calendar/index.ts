@@ -1,5 +1,3 @@
-import Calendar from "./calendar";
 export type { CalendarProps } from "./calendar";
-export const JaCalendar = Calendar
-export default JaCalendar
+export{ Calendar } from "./calendar";
 import './styles/index.scss'
