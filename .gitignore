@@ -27,3 +27,5 @@ yarn-error.log*
 
 **/.dumi/tmp*
 **/.dumi/tmp-production
+
+**/build

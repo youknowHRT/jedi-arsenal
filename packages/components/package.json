@@ -1,38 +1,32 @@
 {
   "name": "@jedi-arsenal/components",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "private": false,
   "description": "React组件库",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "build/lib/index.js",
+  "module": "build/es/index.js",
+  "types": "build/es/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build"
   },
-  "peerDependencies": {
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.0",
-    "classnames": "^2.5.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sass": "^1.77.2"
-  },
   "keywords": [],
   "author": "driss233",
   "license": "ISC",
   "devDependencies": {
-    "@types/react-transition-group": "^4.4.10",
-    "vite-plugin-dts": "^3.9.1"
+    "@types/react-transition-group": "^4.4.10"
   },
   "files": [
-    "dist"
+    "build",
+    "package.json"
   ],
   "dependencies": {
-    "@jedi-arsenal/icons": "workspace:^",
+    "@jedi-arsenal/icons": "^1.0.2",
     "react-transition-group": "^4.4.5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

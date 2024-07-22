@@ -1,11 +1,12 @@
 {
   "name": "@jedi-arsenal/icons",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "description": "React-svg组件库",
-  "main": "dist/jedi-arsenal-icons.es.js",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.js",
   "type": "module",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/es/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "svgo": "svgo -f svg -o svg",
@@ -22,10 +23,10 @@
     "fs-extra": "^11.2.0",
     "prettier": "^3.2.5",
     "svgo": "^3.3.2",
-    "tsx": "^4.11.0",
-    "vite-plugin-dts": "^3.9.1"
+    "tsx": "^4.11.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "package.json"
   ]
 }

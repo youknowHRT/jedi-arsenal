@@ -13,9 +13,6 @@
   "author": "driss233",
   "license": "ISC",
   "description": "React-hooks库",
-  "devDependencies": {
-    "vite-plugin-dts": "^3.9.1"
-  },
   "files": [
     "dist"
   ]
