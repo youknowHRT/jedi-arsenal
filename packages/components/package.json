@@ -1,6 +1,6 @@
 {
   "name": "@jedi-arsenal/components",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "private": false,
   "description": "React组件库",
   "main": "build/lib/index.js",
@@ -18,11 +18,11 @@
     "@types/react-transition-group": "^4.4.10"
   },
   "files": [
-    "build",
+    "build/*",
     "package.json"
   ],
   "dependencies": {
-    "@jedi-arsenal/icons": "^1.0.2",
+    "@jedi-arsenal/icons": "^1.0.6",
     "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {

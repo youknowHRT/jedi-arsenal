@@ -29,6 +29,7 @@ const transformToVueComponent = async (file: string) => {
   const { filename, componentName } = getName(file);
   const tsx = await formatCode(
   `
+  import React from 'react';
   import {CreateIcon} from '../components/createIcon'
 
   const IconSvg = CreateIcon({

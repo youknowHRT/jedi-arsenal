@@ -2,7 +2,7 @@ import "./styles/index.scss";
 import MonthCalendar from "./MonthCalendar";
 import Header from "./Header";
 import dayjs, { Dayjs } from "dayjs";
-import { CSSProperties, ReactNode, useState } from "react";
+import React,{ CSSProperties, ReactNode, useState } from "react";
 import cs from "classnames";
 import LocaleContext from "./local/LocaleContext";
 

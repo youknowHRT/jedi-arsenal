@@ -6,7 +6,7 @@ const resolvePath = (str: string) => path.resolve(__dirname, str);
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({jsxRuntime: "classic", }),
     dts({
       exclude: ["node_modules", "vite.config.ts", "svg", "build"],
       entryRoot: "src",

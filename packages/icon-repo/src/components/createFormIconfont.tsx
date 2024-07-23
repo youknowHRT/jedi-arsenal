@@ -31,7 +31,7 @@ function createScriptUrlElements(scriptUrls: string[], index:number=0){
     document.body.appendChild(script);
   }
 }
-export default function createFromIconfont(options: CustomIconOptions) {
+export function createFromIconfont(options: CustomIconOptions) {
   const { scriptUrl, extraCommonProps = {} } = options;
   if (
     scriptUrl &&

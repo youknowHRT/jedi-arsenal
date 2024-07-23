@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import * as React from 'react';
 
 export interface UseTimerProps {
   id: number;
@@ -10,7 +10,7 @@ export interface UseTimerProps {
 export function useTimer(props: UseTimerProps){
   const {remove, id, duration=2000, onClose} = props;
 
-  const timer = useRef<number|null>(null);
+  const timer = React.useRef<number|null>(null);
   const startTimer = () =>{
     timer.current = window.setTimeout(()=>{
       remove(id)
@@ -25,7 +25,7 @@ export function useTimer(props: UseTimerProps){
     }
   }
 
-  useEffect(()=>{
+  React.useEffect(()=>{
     startTimer()
     return () =>{
       removeTimer()

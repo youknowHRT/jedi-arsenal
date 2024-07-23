@@ -1,6 +1,6 @@
 {
   "name": "@jedi-arsenal/icons",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "private": false,
   "description": "React-svg组件库",
   "main": "dist/lib/index.js",
@@ -26,7 +26,11 @@
     "tsx": "^4.11.0"
   },
   "files": [
-    "dist",
+    "dist/*",
     "package.json"
-  ]
+  ],
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }

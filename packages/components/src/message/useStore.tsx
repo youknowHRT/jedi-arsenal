@@ -1,4 +1,4 @@
-import { useState } from "react";
+import * as React from 'react';
 import { MessageProps, Position } from "./message";
 
 type MessageList = {
@@ -12,7 +12,7 @@ const initialState = {
 }
 
 function useStore(defaultPosition: Position){
-  const [messageList, setMessageList] = useState<MessageList>({...initialState});
+  const [messageList, setMessageList] = React.useState<MessageList>({...initialState});
   return {
     messageList,
     add:(messageProps: MessageProps)=>{

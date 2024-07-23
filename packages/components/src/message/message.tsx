@@ -1,4 +1,5 @@
-import { CSSProperties, FC, ReactNode, forwardRef, useEffect, useImperativeHandle, useMemo, RefObject, createRef } from "react"
+import * as React from 'react';
+import { CSSProperties, FC, ReactNode, forwardRef, useMemo } from "react"
 import useStore from "./useStore";
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import './styles/index.scss'

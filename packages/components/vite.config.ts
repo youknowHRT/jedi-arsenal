@@ -3,13 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import dts from "vite-plugin-dts";
 // import { libInjectCss } from 'vite-plugin-lib-inject-css';
-const resolvePath = (str: string) => path.resolve(__dirname, str);
 
+const resolvePath = (str: string) => path.resolve(__dirname, str);
 export default defineConfig({
   plugins: [
-    react({
-      jsxRuntime: "classic",
-    }),
+    react( {jsxRuntime: "classic"} ),
     dts({
       exclude: ["node_modules", "vite.config.ts", "src/**/*.stories.@(js|jsx|mjs|ts|tsx)","src/**/demo"],
       entryRoot: "src",
@@ -31,7 +29,9 @@ export default defineConfig({
       // formats: ["es", "cjs", "umd"],
     },
     rollupOptions: {
-      external: ["react","react-dom","dayjs", "classnames","react-transition-group","@jedi-arsenal/icons"],
+      external: ["react","react-dom","dayjs", "classnames","react-transition-group",
+        "@jedi-arsenal/icons"
+      ],
       // output: {
       //   globals: {
       //     react: "react",

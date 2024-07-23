@@ -2,7 +2,7 @@ import { CalendarProps } from "./calendar";
 import { Dayjs } from "dayjs";
 // import CalendarLocal from "./local/zh-CN";
 // import CalendarLocal from "./local/en-US";
-import { useContext } from "react";
+import React,{ useContext } from "react";
 import LocaleContext from "./local/LocaleContext";
 import allLocales from "./local";
 import cs from "classnames"

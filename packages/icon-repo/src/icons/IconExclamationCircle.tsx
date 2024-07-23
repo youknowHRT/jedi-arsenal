@@ -1,3 +1,4 @@
+import React from 'react'
 import { CreateIcon } from '../components/createIcon'
 
 const IconSvg = CreateIcon({
